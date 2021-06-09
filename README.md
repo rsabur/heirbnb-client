@@ -10,7 +10,7 @@ ________________________________________________________________________________
     * JavaScript
     * Bootstrap-UI
     * Custom HTML
-    * Custom stylesheet (CSS)
+    * Custom stylesheet
     * MapBox API 
 
 * Backend
