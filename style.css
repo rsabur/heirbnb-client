@@ -1,0 +1,521 @@
+
+
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color:rgb(240, 227, 240);
+    font-size: 18px;
+  }
+
+
+/********** BANNER  **********/
+  .banner {
+      height: 195px;
+  }
+
+  .banner img.logo {
+    width: auto;
+    margin: auto;
+    height: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   }
+
+   
+/********** LOGIN FORM **********/
+   form#login-form {
+       display: block;
+       margin-top: 1px;
+
+       text-align: center;
+       font-family: Arial, Helvetica, sans-serif;
+       box-sizing: border-box;
+       border:0.75em solid rgba(216,191,216,0.8);
+    }
+    
+    
+/********** OPENING CAROSEL **********/
+    .carousel-inner {
+        width: 100%;
+        margin: 0;
+        height: 75%;
+        background-size: cover;
+        border-radius: 5px;
+}
+
+.carousel-inner img {
+    margin: 0 auto;
+    width: 60%;
+    height: 480px;
+    border:0.75em solid rgba(216,191,216,0.8);
+}
+
+
+
+/********** FADE INTO LANDING PAGE  **********/
+  @keyframes logInFade {
+    0% { opacity: 0; }
+    100% {opacity: 1;}
+}
+
+
+/********** GRID PROPERTIES  **********/
+.parent {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(5, 1fr);
+    grid-template-rows: 0.75fr 0.75fr repeat(1, 1fr) 0fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    animation-name: logInFade;
+    animation-duration: 0.5s;
+}
+
+
+/********** LOGO  **********/
+    #logo { 
+        grid-area: 1 / 1 / 3 / 3; 
+        height: fit-content;
+    }
+
+    #logo img {
+        border-radius: 4px;
+        /* border:1em solid rgba(216,191,216,0.8); */
+        /* border-color: rgba(240, 248, 255, .5); */
+        padding: 1rem 1rem 1rem 1rem;
+        width: 300px;
+        height: 300px;
+        margin-left: 20px;
+    }
+    
+
+/********** WELCOME BAR MESSAGE  **********/
+    #welcome-banner { 
+        grid-area: 1 / 2 / 2 / 6;
+        /* height: fit-content; */
+        padding: 6rem 0rem 1rem 1rem;
+        text-align: center;
+        margin: 0 auto;
+        /* border:1em solid rgba(216,191,216,0.8); */
+    }
+
+    #welcome-banner h2 {
+        font-family: auto;
+        display: block;
+        font-size: 3em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: 300;
+    }
+    
+/********** SIDEBAR  **********/
+    #side-bar { 
+        grid-area: 2 / 1 / 7 / 1;
+        /* padding: 0rem 1rem 9rem; */
+        /* padding-right: 3rem; */
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: 1px solid transparent;
+        transition: background-color .3s ease;
+        line-height: 1.5rem;
+        overflow-y: scroll;
+        height: fit-content;
+        overflow-y:auto;
+        margin-top: -30px;
+        /* border:1em solid rgba(216,191,216,0.8); */
+
+    }
+
+      
+/********** LISTING DETAILS  **********/
+    #listing-details { 
+        grid-area: 2 / 2 / 4 / 6; 
+        height: fit-content;
+        padding-bottom: 5%;
+        /* border:1em solid rgba(216,191,216,0.8); */
+        margin-top: -30px;
+    }
+
+    #listing-details .listing-container {
+        position: relative;
+        /* max-width: 100%;
+        height: auto; */
+    }
+
+    .listing-container img {
+        width: 100%;
+        height: 700px;
+        border:0.75em solid rgba(216,191,216,0.8);
+        /* opacity: 0.3; */
+    }
+
+    .location {
+        position: absolute;
+        top: 21px;
+        left: 21px;
+        font-size: 18px;
+        opacity: 3;
+        /* background-color: rgba(216,191,216,0.8); */
+        /* background-color: rgba(255,255,255,0.7) */
+        /* background-color:rgb(240, 227, 240, 0.7) */
+    }
+
+    #new-booking-form p {
+        text-align: center;
+    }
+
+    /* #edit-booking-form p {
+        text-align: center;
+    } */
+
+    .listing-item:hover {
+        background-color: rgba(99, 12, 238, 0.5);
+        color:#FFFFFF;
+        border-color:#FFFFFF;
+    }
+        
+
+      .listing-item:hover {
+        background-color: rgba(99 12 238 / 19%);
+    }
+
+     .listing-item {
+         margin-top: -6px;
+        display: grid;
+        grid-template-columns: repeat(1,1.2fr);
+        grid-auto-rows: 45%;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+      }
+    
+
+/********** MAP STYLING  **********/
+    #map-container { 
+        grid-area: 4 / 2 / 6 / 4; 
+        width: 350px;
+        height: 350px;
+        height: fit-content;
+        align-items: center;
+        border: 1px;
+        /* border:1em solid rgba(216,191,216,0.8); */
+        /* contain: content; */
+    }
+
+    #map-container img {
+        border-style: solid;
+        border-color: rgba(240, 248, 255, .5);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    
+/********** REVIEW STYLING  **********/
+    #review-container { 
+        border: 1px;
+        grid-area: 4 / 4 / 6 / 6; 
+        /* height: fit-content; */
+        /* border:1em solid rgba(216,191,216,0.8); */
+        overflow-y: scroll;
+    }
+    
+    #review-container ul form { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+/********** RESERVATIONS/LOGOUT GRID STYLING  **********/
+    #reservations { 
+        grid-area: 5 / 1 / 6 / 2; 
+        /* height: fit-content; */
+        text-align: left;
+        width: 70%;
+        margin-top: 9rem;
+        margin-left: 2rem;
+        margin-right: auto;
+        /* border:1em solid rgba(216,191,216,0.8); */
+        overflow-y: scroll;
+    }
+
+    #reservations ul {
+        margin: 0 auto;
+        padding: 0;
+        overflow-y: scroll;
+    }
+
+    #reservations button.logout {
+        text-align: center;
+        width: 100%;
+        margin-top: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+/********** BUTTON STYLING - ALL **********/   
+    button.item {
+        position: absolute;
+        bottom: 15px;
+        right: 16px;
+        display:inline-block; 
+        padding: -0.54em 1.6em;
+        border:0.2em solid rgba(216,191,216,0.8);
+        margin:0 0.2em 0.2em 0;
+        border-radius:0.75em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        font-weight:300;
+        color: #FFFFFF;
+        text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+        background-color: purple;
+        text-align:center;
+        transition: all 0.15s;
+    }
+
+    button.item:hover{
+        text-shadow: 0 0 2em rgba(255,255,255,1);
+        color:#FFFFFF;
+        border-color:#FFFFFF;
+        }
+    @media all and (max-width:30em){
+         button.item{
+            display:block;
+            margin:0.4em auto;
+        }
+    }
+
+
+    #logout button {
+        display:inline-block; 
+        padding: -0.54em 1.6em;
+        border:0.2em solid rgba(216,191,216,0.8);
+        margin:0 0.2em 0.2em 0;
+        border-radius:0.75em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        font-weight:300;
+        color: #FFFFFF;
+        text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+        background-color: purple;
+        text-align:center;
+        transition: all 0.15s;
+    }
+
+    #logout button:hover{
+        text-shadow: 0 0 2em rgba(255,255,255,1);
+        color:#FFFFFF;
+        border-color:#FFFFFF;
+        }
+    @media all and (max-width:30em){
+         #logout button{
+            display:block;
+            margin:0.4em auto;
+        }
+    }
+
+    button.deletebtn {
+        display:inline-block; 
+        padding: -0.54em 1.6em;
+        border:0.2em solid rgba(216,191,216,0.8);
+        margin:0 0.2em 0.2em 0;
+        border-radius:0.75em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        font-weight:300;
+        color: #FFFFFF;
+        text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+        background-color: purple;
+        text-align:center;
+        transition: all 0.15s;
+    }
+    
+    button.deletebtn:hover{
+        text-shadow: 0 0 2em rgba(255,255,255,1);
+        color:#FFFFFF;
+        border-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+        button.deletebtn{
+            display:block;
+            margin:0.4em auto;
+        }
+    }
+    
+    form input[type=submit] {
+        display:inline-block; 
+        padding: -0.54em 1.6em;
+        border:0.2em solid rgba(216,191,216,0.8);
+        margin:0 0.2em 0.2em 0;
+        border-radius:0.75em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        font-weight:300;
+        color: #FFFFFF;
+        text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+        background-color: purple;
+        text-align:center;
+        transition: all 0.15s;
+    }
+
+    form input[type=submit]:hover{
+        text-shadow: 0 0 2em rgba(255,255,255,1);
+        color:#FFFFFF;
+        border-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+        form input[type=submit]{
+            display:block;
+            margin:0.4em auto;
+        }
+    }
+
+    button#login {
+        display:inline-block; 
+        padding: -0.54em 1.6em;
+        border:0.2em solid rgba(216,191,216,0.8);
+        margin:0 0.2em 0.2em 80px;
+        border-radius:0.75em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        font-weight:300;
+        color: #FFFFFF;
+        text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+        background-color: purple;
+        text-align:center;
+        transition: all 0.15s;
+    }
+
+    button#login:hover{
+        text-shadow: 0 0 2em rgba(255,255,255,1);
+        color:#FFFFFF;
+        border-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+        button#login{
+            display:block;
+            margin:0.4em auto;
+        }
+    }
+
+    .container { 
+        height: 150px;
+        position: relative;
+        /* border: 1px solid white;  */
+        margin-top: 1%;
+      }
+      
+      .login {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+
+/********** TEXT STYLING  **********/  
+    h3 {
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        font-size: 25px;
+    }
+    h4 {
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        font-size: 25px;
+    }
+
+
+
+/********** RESERVATION FORM STYLING  **********/
+#modal {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  #new-booking-form {
+    background-color:rgb(240, 227, 240);
+    /* background-color:thistle; */
+    margin-top: 20vh;
+    width: 600px;
+    margin: 20vh auto 0;
+  }
+
+  
+  /********** OTHER FORM STYLING  **********/
+  form {
+    padding: 1em;
+  }
+  
+  form input,
+  form textarea {
+    display: block;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 600px;
+    padding: 0.25em 1em;
+    margin: 0.25em 0 0.5em;
+  }
+
+  /* form input[type=submit] {
+    margin: 1em 0 0 0;
+    padding: 1em;
+    width: auto;
+    font-weight: 600;
+    cursor: pointer;
+  } */
+  
+  .rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+  
