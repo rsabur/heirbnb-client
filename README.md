@@ -30,4 +30,4 @@ Start HeirBnb's frontend using:
 _______________________________________________________________________________________
 
 ## Demo
-[![mystyle demo](https://i.imgur.com/cUS2Kjc.png)](https://youtu.be/em0mnxZD4Gk "HeirBnb Demo - Click to Watch!")
+[![heirbnb demo](https://i.imgur.com/cUS2Kjc.png)](https://youtu.be/em0mnxZD4Gk "HeirBnb Demo - Click to Watch!")
