@@ -104,8 +104,6 @@ function showListingDetailsHelper(listingObj) {
     listingDesc.innerText = `${listingObj.description}`
 
     const listingMapImage = document.querySelector('#map-container img')
-    // listingMapImage.src = listingObj.map_img
-    // listingMapImage.alt = listingObj.location
 
     reviewForm.dataset.id = listingObj.id
     viewReview.dataset.id = listingObj.id
