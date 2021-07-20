@@ -161,7 +161,7 @@ function reviewFormFunc() {
             comment: event.target.comment.value,
             listing_id: listingId
         }
-        console.log(event.target.rate)
+
         const reviewComment = event.target.comment.value
         const reviewRating = event.target.rating.value
         const reviewLi = document.createElement('li')
@@ -171,10 +171,8 @@ function reviewFormFunc() {
 
         const deleteButton = document.createElement('button')
         deleteButton.className='btn btn-danger'
-        // deleteButton.className = 'delete-btn'
         deleteButton.innerText = "x"
         viewReview.append(deleteButton)
-
 
         reviewForm.reset()
         fetch('http://localhost:3000/reviews', {
@@ -192,7 +190,7 @@ function reviewFormFunc() {
 
 
 /********** DELETE REVIEW **********/
-function viewReviewFunc() {
+function deleteReviewFunc() {
     viewReview.addEventListener("click", event => {
 
         if (event.target.className === 'btn btn-danger') {
@@ -267,7 +265,7 @@ function showBookingsHelper(newBookingObj) {
 
     const resDeleteButton = document.createElement('button')
     resDeleteButton.className = 'btn btn-danger'
-    // resDeleteButton.className = 'res-delete-btn'
+
     resDeleteButton.innerText = "Delete"
     listingRes.append(resDeleteButton)
 
@@ -281,7 +279,7 @@ function showBookingsHelper(newBookingObj) {
 
 
 /********** DELETE RESERVATION **********/
-function viewReservationFunc() {
+function deleteReservationFunc() {
     viewReservation.addEventListener("click", event => {
 
         if (event.target.className === 'btn btn-danger') {
@@ -385,5 +383,5 @@ fetchAllListings()
 showListingDetails()
 newBookingForm()
 reviewFormFunc()
-viewReviewFunc()
-viewReservationFunc()
+deleteReviewFunc()
+deleteReservationFunc()
